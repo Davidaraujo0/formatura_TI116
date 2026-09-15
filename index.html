@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatura TI116 — Vai Dar Praia</title>
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+<h1>FORMATURA TI116 — VAI DAR PRAIA</h1>
+<p>Confraternização de formatura da turma TI116 — Técnico em Informática</p>
+</header>
+<main>
+<section>
+<h2>O evento</h2>
+<p>
+               A turma TI116 vai comemorar a formatura com uma confraternização
+               na Praia Grande. Um dia para aproveitar, tirar fotos e celebrar
+               essa conquista com a turma.
+</p>
+</section>
+
+<section>
+<h2>Quando e onde</h2>
+<dl>
+<dt>Data</dt>
+<dd>
+<time datetime="2026-12-12">
+                       Sábado, 12 de dezembro de 2026
+</time>
+</dd>
+<dt>Horário</dt>
+<dd>
+                   Das
+<time datetime="09:00">9h</time>
+                   às
+<time datetime="18:00">18h</time>
+</dd>
+<dt>Local</dt>
+<dd>Praia Grande — SP · Quiosque 14, Avenida Costa e Silva, Boqueirão</dd>
+<dt>Saída</dt>
+<dd>6h30, em frente ao Senac Largo Treze</dd>
+<dt>Volta</dt>
+<dd>20h, no mesmo lugar</dd>
+<dt>Transporte</dt>
+<dd>Ônibus fretado (vagas limitadas) ou por conta própria</dd>
+<dt>Confirmação até</dt>
+<dd>
+<time datetime="2026-11-28">
+                       28 de novembro de 2026
+</time>
+</dd>
+</dl>
+</section>
+
+<section>
+<h2>Programação</h2>
+<table>
+<caption>Programação do dia</caption>
+<thead>
+<tr>
+<th scope="col">Horário</th>
+<th scope="col">O que acontece</th>
+<th scope="col">Onde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>06h30</td>
+<td>Embarque</td>
+<td>Senac Largo Treze</td>
+</tr>
+<tr>
+<td>09h00</td>
+<td>Chegada e montagem</td>
+<td>Quiosque 14</td>
+</tr>
+<tr>
+<td>12h00</td>
+<td>Almoço coletivo</td>
+<td>Quiosque 14</td>
+</tr>
+<tr>
+<td>15h00</td>
+<td>Foto oficial da turma</td>
+<td>Faixa de areia</td>
+</tr>
+<tr>
+<td>17h00</td>
+<td>Desmontagem</td>
+<td>Quiosque 14</td>
+</tr>
+<tr>
+<td>18h00</td>
+<td>Embarque de volta</td>
+<td>Estacionamento do quiosque</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Como chegar</h2>
+<p>
+               O evento será realizado na Praia Grande, no Quiosque 14,
+               Avenida Costa e Silva, Boqueirão.
+</p>
+<iframe
+               src="https://www.google.com/maps?q=Praia+Grande+SP&output=embed"
+               width="100%"
+               height="300"
+               title="Mapa da Praia Grande"
+               loading="lazy">
+</iframe>
+</section>
+
+<section>
+<h2>Confirme sua presença</h2>
+<form action="confirmacao" method="post">
+<div class="campo">
+<label for="nome">Nome completo</label>
+<input
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       required
+                       minlength="3"
+                       autocomplete="name">
+</div>
+
+<div class="campo">
+<label for="email">E-mail</label>
+<input
+                       type="email"
+                       id="email"
+                       name="email"
+                       required
+                       autocomplete="email">
+</div>
+
+<div class="campo">
+<label for="whatsapp">WhatsApp</label>
+<input
+                       type="tel"
+                       id="whatsapp"
+                       name="whatsapp"
+                       inputmode="tel"
+                       placeholder="(11) 90000-0000"
+                       autocomplete="tel"
+                       pattern="(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{4}|[0-9]{10,11})"
+                       aria-describedby="dica-whatsapp">
+<p id="dica-whatsapp">
+                       Digite com ou sem parênteses e hífen.
+                       Exemplos: (11) 90000-0000 ou 11900000000.
+</p>
+</div>
+
+<div class="campo">
+<label for="nascimento">Data de nascimento</label>
+<input
+                       type="date"
+                       id="nascimento"
+                       name="nascimento"
+                       autocomplete="bday">
+</div>
+
+<fieldset>
+<legend>Você vai?</legend>
+<div class="opcao">
+<input
+                           type="radio"
+                           id="fretado"
+                           name="presenca"
+                           value="fretado"
+                           required>
+<label for="fretado">Com o fretado</label>
+</div>
+<div class="opcao">
+<input
+                           type="radio"
+                           id="propria"
+                           name="presenca"
+                           value="propria">
+<label for="propria">Por conta própria</label>
+</div>
+<div class="opcao">
+<input
+                           type="radio"
+                           id="nao-vou"
+                           name="presenca"
+                           value="nao-vou">
+<label for="nao-vou">Não vou conseguir ir</label>
+</div>
+</fieldset>
+
+<div class="campo">
+<label for="acompanhantes">Acompanhantes</label>
+<input
+                       type="number"
+                       id="acompanhantes"
+                       name="acompanhantes"
+                       min="0"
+                       max="2"
+                       value="0">
+</div>
+
+<div class="campo">
+<label for="camiseta">Tamanho da camiseta</label>
+<select id="camiseta" name="camiseta">
+<option value="">Selecione uma opção</option>
+<option value="P">P</option>
+<option value="M">M</option>
+<option value="G">G</option>
+<option value="GG">GG</option>
+<option value="nao-quero">Não quero</option>
+</select>
+</div>
+
+<fieldset>
+<legend>O que você leva?</legend>
+<div class="opcao">
+<input
+                           type="checkbox"
+                           id="comida"
+                           name="leva"
+                           value="comida">
+<label for="comida">Comida</label>
+</div>
+<div class="opcao">
+<input
+                           type="checkbox"
+                           id="bebida"
+                           name="leva"
+                           value="bebida">
+<label for="bebida">Bebida</label>
+</div>
+<div class="opcao">
+<input
+                           type="checkbox"
+                           id="protetor"
+                           name="leva"
+                           value="protetor">
+<label for="protetor">Protetor solar</label>
+</div>
+<div class="opcao">
+<input
+                           type="checkbox"
+                           id="outro"
+                           name="leva"
+                           value="outro">
+<label for="outro">Outro</label>
+</div>
+</fieldset>
+
+<div class="campo">
+<label for="observacao">
+                       Restrição alimentar ou observação
+</label>
+<textarea
+                       id="observacao"
+                       name="observacao"
+                       rows="5"
+                       maxlength="300"></textarea>
+</div>
+
+<div class="campo">
+<label for="foto">Foto sua para o mural</label>
+<input
+                       type="file"
+                       id="foto"
+                       name="foto"
+                       accept="image/*">
+</div>
+
+<div class="opcao">
+<input
+                       type="checkbox"
+                       id="imagem"
+                       name="imagem"
+                       value="autorizado">
+<label for="imagem">
+                       Autorizo o uso da minha imagem
+</label>
+</div>
+
+<div class="opcao">
+<input
+                       type="checkbox"
+                       id="combinados"
+                       name="combinados"
+                       value="aceito"
+                       required>
+<label for="combinados">
+                       Li e aceito os combinados da turma
+</label>
+</div>
+
+<button type="submit">Confirmar presença</button>
+</form>
+</section>
+</main>
+
+<footer>
+<address>
+           Comissão de formatura TI116 — ti116@exemplo.com
+</address>
+</footer>
+</body>
+</html>
